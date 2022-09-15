@@ -6,7 +6,11 @@ export default function TrackList(props) {
 
     return(
         <div className="TrackList">
-
+            {
+                props.tracks.map( track => {
+                    <Track track = {track} key = {track.id} />
+                })
+            }
             
         </div>
     )
